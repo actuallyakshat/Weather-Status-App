@@ -17,7 +17,7 @@
 }
 
 .wrapper {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   color: var(--colorLight2);
   background-image: linear-gradient(160deg, #112d4e 0%, #3f72af 100%);
@@ -240,4 +240,18 @@ h1 {
 .error-container p {
   margin: 3rem 0 1rem 0;
   font-size: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .more-details {
+    flex-direction: column;
+  }
+  .tab-container{
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+  .wrapper{
+    height: 120vh;
+  }
 }
