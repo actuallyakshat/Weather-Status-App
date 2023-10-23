@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>Weather App</h1>
+      <div class="tab-container">
+        <p class="tab" data-userWeather>Your Location</p>
+        <p class="tab" data-searchWeather>Search Locaton</p>
+      </div>
+
+      <div class="weather-container">
+        <!-- grant location view -->
+
+        <div class="grant-location-container sub-container">
+          <img
+            src="./assets/location.png"
+            width="80px"
+            height="80px"
+            loading="lazy"
+          />
+          <p>Grant Location Access</p>
+          <p>Allow access to get weather information</p>
+          <button class="btn" data-grantAccess>Grant Access</button>
+        </div>
+
+        <!-- search location view -->
+
+        <form class="form-container" data-searchForm>
+          <input
+            type="text"
+            placeholder="Search for city..."
+            data-searchInput
+          />
+          <button class="btn" type="submit">
+            <img
+              src="./assets/search.png"
+              alt=""
+              width="20px"
+              height="20px"
+              loading="lazy"
+            />
+          </button>
+        </form>
+
+        <!-- loading screen container -->
+
+        <div class="loading-container sub-container">
+          <img
+            src="./assets/loading.gif"
+            alt=""
+            width="170px"
+            height="170px"
+            loading="lazy"
+          />
+          <p>Loading...</p>
+        </div>
+
+        <!-- error container -->
+        <div class="error-container sub-container">
+          <img
+            src="./assets/not-found.png"
+            loading="lazy"
+            height="150px"
+            width="150px"
+          />
+          <p>Location not found!</p>
+        </div>
+
+        <!-- current location view -->
+
+        <div class="user-info-container sub-container">
+          <!-- city's name and flag -->
+          <div class="name">
+            <p data-cityName></p>
+            <img data-countryIcon />
+          </div>
+          <p data-weatherDesc></p>
+          <img data-weatherIcon />
+          <p data-temperature></p>
+          <div class="more-details">
+            <div class="windspeed parameter">
+              <img src="./assets/wind.png" alt="" loading="lazy" />
+              <p>Wind Speed</p>
+              <p data-windSpeed></p>
+            </div>
+
+            <div class="humidity parameter">
+              <img src="./assets/humidity.png" alt="" loading="lazy" />
+              <p>Humidity</p>
+              <p data-humidity></p>
+            </div>
+
+            <div class="clouds parameter">
+              <img src="./assets/cloud.png" alt="" loading="lazy" />
+              <p>Clouds</p>
+              <p data-cloudiness></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
